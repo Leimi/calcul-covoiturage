@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!-- Consider specifying the language of your content by adding the `lang` attribute to <html> -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title></title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/modernizr.js"></script>
+</head>
+<body>
+
+	<div id="container">
+		<h1>Combien me coûtera ce covoiturage ?</h1>
+		<!--[if lt IE 7]><p class="chromeframe">Votre navigateur est méga vieux. <a target=_blank href="http://browsehappy.com/">Téléchargez-en un mieux</a> pour être heureux, et accessoirement utiliser cette application.</p><![endif]-->
+		<noscript>
+			<p>Pour utiliser cette application, vous devez <a href="http://www.enable-javascript.com/fr/" target=_blank>activer le JavaScript</a>.</p>
+			<p>Si vous ne pouvez pas activer le JavaScript et que vous en voulez grave au développeur, vous pouvez toujours lui <a href="mailto:&#101;&#109;&#109;&#097;&#110;&#117;&#101;&#108;&#064;&#101;&#109;&#109;&#097;&#110;&#117;&#101;&#108;&#112;&#101;&#108;&#108;&#101;&#116;&#105;&#101;&#114;&#046;&#099;&#111;&#109;?subject=Application de covoiturage indisponible sans JS">envoyer un message d'insultes.</p>
+		</noscript>
+
+		<div id="form">
+
+		</div>
+
+  ​
+	</div>
+
+	<script id="price-form-template" type="template">
+		<form>
+			<div class="input-container">
+				<div class="people helper">
+					<% for (var i = 10; i >= 1; i--) { %>
+						<input type="radio" id="form-price-<%= id %>-people-<%= i %>" name="people" value="<%= i %>">
+						<label class="label" for="form-price-<%= id %>-people-<%= i %>" title="<%= i %>"><%= i %></label>
+					<% } %>
+				</div>
+				<input class="input number" type="text" name="people" id="form-price-<%= id %>-people" value="<%= people %>" required>
+				<label class="label" for="form-price-<%= id %>-people">personnes</label>
+			</div>
+			<div class="input-container">
+				<input class="helper" type="range" step="0.5" min="3" max="20" name="liters" value="<%= liters %>" required>
+				<input class="input number" type="text" name="liters" id="form-price-<%= id %>-liters" value="<%= liters %>" required>
+				<label class="label" for="form-price-<%= id %>-liters">L/100Km</label>
+			</div>
+			<div class="input-container">
+				<select class="gaz-selector helper" name="gazPrice" id="form-price-<%= id %>-gaz-type">
+					<option value="">carburant</option>
+				</select>
+				<input class="input number" type="text" name="gazPrice" id="form-price-<%= id %>-gaz-price" required value="<%= gazPrice %>">
+				<label class="label" for="form-price-<%= id %>-gaz-price">€/L</label>
+			</div>
+			<div class="input-container">
+				<div class="help helper">
+					<label class="label" for="form-price-<%= id %>-from">Adresse de départ</label>
+					<input class="input helper" type="text" name="from" id="form-price-<%= id %>-from" value="<%= from %>">
+				</div>
+					<input class="input number" type="text" name="km" id="form-price-<%= id %>-km" required>
+					<label class="label" for="form-price-<%= id %>-km">Km parcourus</label>
+				<div class="help">
+					<label class="label" for="form-price-<%= id %>-to">Adresse d'arrivée</label>
+					<input class="input helper" type="text" name="to" id="form-price-<%= id %>-to" value="<%= to %>">
+				</div>
+				<div class="help helper">
+					<div class="lft">aller 
+						<label class="label-with-checkbox">
+							<input type="checkbox" name="km-twice">
+							et retour
+						</label>
+					</div>
+					<div class="rght">
+						<label class="label-with-checkbox">
+							<input type="checkbox" name="toll"> péage :
+							<input class="number input" type="text" name="toll-value" id="form-price-<%= id %>-toll"> €
+						</label>
+					</div>
+				</div>
+				<div class="map helper"></div> 
+			</div>
+			<div class="results">
+				<span><span class=cost><%= cost %></span> €</span>
+				<span>par personne, soit <%= cost*people %> € en tout</span>
+			</div>
+		</form>
+	</script>
+	<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+	<script src="js/jquery.js"></script>
+	<script src="js/underscore.js"></script>
+	<script src="js/backbone.js"></script>
+	<script src="js/yepnope.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>

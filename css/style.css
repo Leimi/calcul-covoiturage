@@ -1,0 +1,219 @@
+@charset "UTF-8";
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans);
+/* normalize.css v2.1.0 | MIT License | git.io/normalize */
+/* ========================================================================== HTML5 display definitions ========================================================================== */
+/** Correct `block` display not defined in IE 8/9. */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary { display: block; }
+
+/** Correct `inline-block` display not defined in IE 8/9. */
+audio, canvas, video { display: inline-block; }
+
+/** Prevent modern browsers from displaying `audio` without controls. Remove excess height in iOS 5 devices. */
+audio:not([controls]) { display: none; height: 0; }
+
+/** Address styling not present in IE 8/9. */
+[hidden] { display: none; }
+
+/* ========================================================================== Base ========================================================================== */
+/** 1. Set default font family to sans-serif. 2. Prevent iOS text size adjust after orientation change, without disabling user zoom. */
+html { font-family: sans-serif; /* 1 */ -webkit-text-size-adjust: 100%; /* 2 */ -ms-text-size-adjust: 100%; /* 2 */ }
+
+/** Remove default margin. */
+body { margin: 0; }
+
+/* ========================================================================== Links ========================================================================== */
+/** Address `outline` inconsistency between Chrome and other browsers. */
+a:focus { outline: thin dotted; }
+
+/** Improve readability when focused and also mouse hovered in all browsers. */
+a:active, a:hover { outline: 0; }
+
+/* ========================================================================== Typography ========================================================================== */
+/** Address variable `h1` font-size and margin within `section` and `article` contexts in Firefox 4+, Safari 5, and Chrome. */
+h1 { font-size: 2em; margin: 0.67em 0; }
+
+/** Address styling not present in IE 8/9, Safari 5, and Chrome. */
+abbr[title] { border-bottom: 1px dotted; }
+
+/** Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome. */
+b, strong { font-weight: bold; }
+
+/** Address styling not present in Safari 5 and Chrome. */
+dfn { font-style: italic; }
+
+/** Address differences between Firefox and other browsers. */
+hr { -moz-box-sizing: content-box; box-sizing: content-box; height: 0; }
+
+/** Address styling not present in IE 8/9. */
+mark { background: #ff0; color: #000; }
+
+/** Correct font family set oddly in Safari 5 and Chrome. */
+code, kbd, pre, samp { font-family: monospace, serif; font-size: 1em; }
+
+/** Improve readability of pre-formatted text in all browsers. */
+pre { white-space: pre-wrap; }
+
+/** Set consistent quote types. */
+q { quotes: "\201C" "\201D" "\2018" "\2019"; }
+
+/** Address inconsistent and variable font size in all browsers. */
+small { font-size: 80%; }
+
+/** Prevent `sub` and `sup` affecting `line-height` in all browsers. */
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+
+sup { top: -0.5em; }
+
+sub { bottom: -0.25em; }
+
+/* ========================================================================== Embedded content ========================================================================== */
+/** Remove border when inside `a` element in IE 8/9. */
+img { border: 0; }
+
+/** Correct overflow displayed oddly in IE 9. */
+svg:not(:root) { overflow: hidden; }
+
+/* ========================================================================== Figures ========================================================================== */
+/** Address margin not present in IE 8/9 and Safari 5. */
+figure { margin: 0; }
+
+/* ========================================================================== Forms ========================================================================== */
+/** Define consistent border, margin, and padding. */
+fieldset { border: 1px solid #c0c0c0; margin: 0 2px; padding: 0.35em 0.625em 0.75em; }
+
+/** 1. Correct `color` not being inherited in IE 8/9. 2. Remove padding so people aren't caught out if they zero out fieldsets. */
+legend { border: 0; /* 1 */ padding: 0; /* 2 */ }
+
+/** 1. Correct font family not being inherited in all browsers. 2. Correct font size not being inherited in all browsers. 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome. */
+button, input, select, textarea { font-family: inherit; /* 1 */ font-size: 100%; /* 2 */ margin: 0; /* 3 */ }
+
+/** Address Firefox 4+ setting `line-height` on `input` using `!important` in the UA stylesheet. */
+button, input { line-height: normal; }
+
+/** Address inconsistent `text-transform` inheritance for `button` and `select`. All other form control elements do not inherit `text-transform` values. Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+. Correct `select` style inheritance in Firefox 4+ and Opera. */
+button, select { text-transform: none; }
+
+/** 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio` and `video` controls. 2. Correct inability to style clickable `input` types in iOS. 3. Improve usability and consistency of cursor style between image-type `input` and others. */
+button, html input[type="button"], input[type="reset"], input[type="submit"] { -webkit-appearance: button; /* 2 */ cursor: pointer; /* 3 */ }
+
+/** Re-set default cursor for disabled elements. */
+button[disabled], html input[disabled] { cursor: default; }
+
+/** 1. Address box sizing set to `content-box` in IE 8/9. 2. Remove excess padding in IE 8/9. */
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; /* 1 */ padding: 0; /* 2 */ }
+
+/** 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome. 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome (include `-moz` to future-proof). */
+input[type="search"] { -webkit-appearance: textfield; /* 1 */ -moz-box-sizing: content-box; -webkit-box-sizing: content-box; /* 2 */ box-sizing: content-box; }
+
+/** Remove inner padding and search cancel button in Safari 5 and Chrome on OS X. */
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+
+/** Remove inner padding and border in Firefox 4+. */
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+
+/** 1. Remove default vertical scrollbar in IE 8/9. 2. Improve readability and alignment in all browsers. */
+textarea { overflow: auto; /* 1 */ vertical-align: top; /* 2 */ }
+
+/* ========================================================================== Tables ========================================================================== */
+/** Remove most spacing between table cells. */
+table { border-collapse: collapse; border-spacing: 0; }
+
+.ir { background-color: transparent; border: 0; overflow: hidden; *text-indent: -9999px; }
+.ir:before { content: ""; display: block; width: 0; height: 100%; }
+
+.hidden, .mobile-only { display: none !important; visibility: hidden; }
+
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+
+.invisible { visibility: hidden; }
+
+.clearfix:before, .clearfix:after { content: " "; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }
+
+.rght { float: right; }
+
+.lft { float: left; }
+
+.b, b, strong { font-weight: normal; background: #fff59b; padding: 2px; }
+
+.i { font-style: italic; }
+
+.strike { text-decoration: line-through; }
+
+.xsmall { font-size: x-small; }
+
+.small { font-size: small; }
+
+.medium { font-size: medium; }
+
+.error { color: red; }
+
+.ok { color: green; }
+
+* { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+body, button, select, input, textarea, label { color: #222222; font-family: 'Droid Sans', sans-serif; }
+
+h1, h2, h3, h4, h5, h6, fieldset.group > legend:first-child { font-weight: normal; }
+
+.input { margin: 3px 0; padding: 3px; border: 1px solid #ccc; background-color: white; border-radius: 2px; box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1); color: rgba(0, 0, 0, 0.75); }
+.input:focus { background-color: #fafafa; border-color: #b3b3b3; }
+
+#container { margin: 0 auto; max-width: 600px; }
+
+.results { background: #fff; display: inline-block; *display: inline; *zoom: 1; font-family: Courier New; font-weight: bold; font-size: 1.2em; text-transform: uppercase; color: #a90000; border: 3px solid #a90000; padding: 15px; -webkit-transform: rotate(-10deg); -moz-transform: rotate(-10deg); -ms-transform: rotate(-10deg); -o-transform: rotate(-10deg); transform: rotate(-10deg); box-shadow: 0 0 0 5px white, 0 0 0 9px #a90000; position: relative; left: 200px; top: -230px; -webkit-transition: all 0.5s linear; -moz-transition: all 0.5s linear; -o-transition: all 0.5s linear; transition: all 0.5s linear; opacity: 1; }
+.results > span { display: block; }
+.results > span:first-child { font-size: 2em; padding-bottom: 5px; border-bottom: 2px solid #a90000; }
+.results.not { opacity: 0; -webkit-transform: scale(5); -moz-transform: scale(5); -ms-transform: scale(5); -o-transform: scale(5); transform: scale(5); }
+
+.people { /* :not(:checked) is a filter, so that browsers that don’t support :checked don’t 
+	 follow these rules. Every browser that supports :checked also supports :not(), so
+	 it doesn’t make the test unnecessarily selective */ display: inline-block; *display: inline; *zoom: 1; position: relative; top: 8px; padding-right: 10px; }
+.people:not(:checked) > input { position: absolute; top: -9999px; clip: rect(0, 0, 0, 0); }
+.people:not(:checked) > label { float: right; position: relative; width: 26px; height: 64px; background: url('../img/g3015b.png?1342803979') no-repeat top left; background-position: 1px 0; background-size: 24px 64px; display: block; border: 0; font: 0/0 a; text-shadow: none; color: transparent; background-color: transparent; z-index: 2; }
+.people:not(:checked) > label:hover, .people:not(:checked) > label:hover ~ label { background-image: url('../img/g3015c.png?1342805004'); }
+.people > input:checked ~ label { background-image: url('../img/g3015.png?1342803918'); }
+.people > input:checked + label:hover, .people > input:checked + label:hover ~ label, .people > input:checked ~ label:hover, .people > input:checked ~ label:hover ~ label, .people > label:hover ~ input:checked ~ label { background-image: url('../img/g3015.png?1342803918'); }
+.people > label:active { position: relative; top: 1px; left: 1px; }
+.people:after { content: '...'; position: absolute; bottom: -3px; right: 0; color: #9eadcc; }
+
+.label-with-checkbox { padding: 3px 7px; border: 1px solid #ddd; background: #f1f1f1; border-radius: 15px; line-height: 2; }
+.label-with-checkbox.checked { background: #E7F5D6; border: 1px solid #79b52e; }
+.label-with-checkbox input[type=checkbox] { vertical-align: middle; }
+.label-with-checkbox .number { margin: 0; }
+
+.label, .note { display: inline-block; *display: inline; *zoom: 1; }
+
+.number { width: 60px; text-align: right; }
+
+#form { margin-left: 135px; }
+
+input[type=range] { vertical-align: middle; }
+
+.help { font-size: 0.8em; }
+.help .label, .help .note { display: block; }
+.help .helper { margin-bottom: 10px; }
+
+.helper { display: inline-block; *display: inline; *zoom: 1; width: 270px; }
+
+.input-container { margin: 10px 0; }
+
+.note { font-size: .8em; font-style: italic; }
+
+.map { margin: 6px 0 10px; display: block; height: 250px; }
+.map.inactive { opacity: 0.7; }
+
+@media print { * { background: transparent !important; color: black !important; box-shadow: none !important; text-shadow: none !important; }
+  a, a:visited { text-decoration: underline; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; }
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3 { page-break-after: avoid; } }

@@ -1,0 +1,187 @@
+* {
+	@include box-sizing(border-box);
+}
+body, button, select, input, textarea, label {
+	color: $fontColor;
+	font-family: $baseFontFamily;
+}
+
+h1, h2, h3, h4, h5, h6, fieldset.group > legend:first-child {
+	font-weight: normal;
+}
+
+.input {
+	margin: 3px 0;
+	padding: 3px;
+	border: 1px solid #ccc;
+	background-color: white;
+	border-radius: 2px;
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1);
+	color: rgba(0, 0, 0, 0.75);
+	&:focus {
+		background-color: #fafafa;
+		border-color: #b3b3b3;
+	}
+}
+
+.mobile-only { @extend .hidden; }
+
+#container {
+	margin: 0 auto;
+	max-width: 600px;
+}
+
+.results {
+	$red: #A90000;
+	background: #fff;
+	@include display-ib;
+	font-family: Courier New;
+	font-weight: bold;
+	font-size: 1.2em;
+	text-transform: uppercase;
+	color: $red;
+	border: 3px solid $red;
+	padding: 15px;
+	@include transform(rotate(-10deg));
+	box-shadow: 0 0 0 5px #fff, 0 0 0 9px $red;
+	position: relative;
+	left: 200px;
+	top: -230px;
+	@include transition(all 0.5s linear);
+	> span {
+		display: block;
+		&:first-child {
+			font-size: 2em;
+			padding-bottom: 5px;
+			border-bottom: 2px solid $red;
+		}
+	}
+	&.not {
+		opacity: 0;
+		@include transform(scale(5));
+	}
+	opacity: 1;
+}
+
+.people {
+/* :not(:checked) is a filter, so that browsers that don’t support :checked don’t 
+	 follow these rules. Every browser that supports :checked also supports :not(), so
+	 it doesn’t make the test unnecessarily selective */
+	&:not(:checked) {
+		> input {
+			position:absolute;
+			top:-9999px;
+			clip:rect(0,0,0,0);
+		}
+		> label {
+			float:right;
+			position: relative;
+			width: 26px;
+			height: 64px;
+			background: image-url("g3015b.png") no-repeat top left;
+			background-position: 1px 0;
+			background-size: 24px 64px;
+			display: block;
+			border: 0; font: 0/0 a; text-shadow: none; color: transparent; background-color: transparent;
+			z-index: 2;
+		}
+		> label:hover,
+		> label:hover ~ label {
+			background-image: image-url("g3015c.png");
+		}
+	}
+	> input:checked ~ label {
+		background-image: image-url("g3015.png");
+	}
+	> input:checked + label:hover,
+	> input:checked + label:hover ~ label,
+	> input:checked ~ label:hover,
+	> input:checked ~ label:hover ~ label,
+	> label:hover ~ input:checked ~ label {
+		background-image: image-url("g3015.png");
+	}
+	> label:active {
+		position:relative;
+		top:1px;
+		left:1px;
+	}
+	@include display-ib;
+	position: relative;
+	top: 8px;
+	padding-right: 10px;
+	&:after {
+		content:'...';
+		position: absolute;
+		bottom: -3px;
+		right: 0;
+		color: #9eadcc;
+	}
+}
+
+.label-with-checkbox {
+	padding: 3px 7px;
+	border: 1px solid #ddd;
+	background: #f1f1f1;
+	border-radius: 15px;
+	line-height: 2;
+	&.checked {
+		background: #E7F5D6;
+		border: 1px solid #79b52e;
+	}
+	input[type=checkbox] {
+		vertical-align: middle;
+	}
+	.number {
+		margin: 0;
+	}
+}
+
+.label {
+	@include display-ib;
+	// width: 300px;
+}
+
+.number {
+	width: 60px;
+	text-align: right;
+}
+
+#form {
+	margin-left: 135px;
+}
+
+input[type=range] {
+	vertical-align: middle;
+}
+
+.help {
+	font-size: 0.8em;
+	.label {
+		display: block;
+	}
+	.helper {
+		margin-bottom: 10px;
+	}
+}
+.helper {
+	@include display-ib;
+	width: 270px;
+}
+.input-container {
+	margin: 10px 0;
+}
+
+.note {
+	@extend .label;
+	font-size: .8em;
+	font-style: italic;
+}
+
+.map {
+	margin: 6px 0 10px;
+	display: block;
+	height: 250px;
+	&.inactive {
+		opacity: 0.7;
+	}
+}
