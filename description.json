@@ -3,6 +3,5 @@
     "url": "http://manu.habite.la/covoiturage",
     "content": "<p class=warning>Travail en cours !</p><p>Cette appli web vous indique le coût de votre prochain voyage en voiture, que vous soyez seul ou à plusieurs. L'interface est faite tant pour les gens qui connaissent exactement les kilomètres qu'ils ont à faire ou le prix au litre de leur carburant, que pour ceux qui en ont simplement une vague idée à partir de leur itinéraire ou du type de carburant. Cela permet de donner une estimation précise du coût du voyage tout en proposant une interface très simple. Yeah.</p>",
     "class": "covoiturage",
-    "tags": "web",
-    "qrcode": "osef"
+    "tags": "web"
 }
